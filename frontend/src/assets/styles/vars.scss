@@ -1,0 +1,30 @@
+:root {
+  --scrollbar-size: 8px;
+  --font-size: 14px;
+  --line-height: 1.65;
+  --titlebar-height: 36px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-scrollbar-thumb: #ccc;
+    --color-scrollbar-thumb-hover: #bbb;
+    --color-background: #ffffffb0;
+    --color-text: #000000;
+    --color-titlebar-btn-back: #00000000;
+    --color-titlebar-btn-back-hover: #00000010;
+    --color-titlebar-btn-close-hover: #ff000080;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-scrollbar-thumb: #444;
+    --color-scrollbar-thumb-hover: #555;
+    --color-background: #282828b0;
+    --color-text: #ffffff;
+    --color-titlebar-btn-back: #ffffff00;
+    --color-titlebar-btn-back-hover: #ffffff20;
+    --color-titlebar-btn-close-hover: #ff0000a0;
+  }
+}

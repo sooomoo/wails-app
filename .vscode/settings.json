@@ -1,18 +1,12 @@
 {
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "local",
-            "username": "root",
-            "database": "sys",
-            "password": "abc12345"
-        }
-    ]
+  // 保存时自动格式化
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 指定 Prettier 为默认格式化工具
+  // 保存时通过 ESLint 修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // 避免其他格式化工具干扰
+  "eslint.validate": ["vue", "javascript", "typescript"],
+  "eslint.enable": true // 启用 ESLint
 }
