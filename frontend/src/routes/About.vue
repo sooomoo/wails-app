@@ -11,7 +11,7 @@ const gotoHome = () => {
 <template>
     This is about page
     <button @click="gotoHome">Home</button>
-    <img class="about__img" src="@assets/images/logo-universal.png" />
+    <img class="about__img" src="@/assets/images/logo-universal.png" />
     <div class="about__div-img"></div>
 </template>
 
@@ -24,7 +24,7 @@ const gotoHome = () => {
 .about__div-img {
     width: 200px;
     height: 200px;
-    background-image: url('@assets/images/logo-universal.png');
+    background-image: url('@/assets/images/logo-universal.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

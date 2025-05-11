@@ -8,9 +8,7 @@ export default defineConfig({
   appType: 'spa',
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src"),
-      '@assets': resolve('src/assets'),
-      '@img': resolve('src/assets/images')
+      "@": resolve(__dirname, "./src"), 
     }
   },
 })
