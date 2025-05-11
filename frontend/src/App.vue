@@ -3,7 +3,7 @@ import TitleBar from './components/TitleBar.vue'
 </script>
 
 <template>
-  <TitleBar icon="./assets/images/logo-universal.png" title="演示案例"></TitleBar>
+  <TitleBar icon="@/assets/images/logo-universal.png" title="演示案例"></TitleBar>
   <RouterView />
 </template>
 
