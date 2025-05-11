@@ -14,7 +14,7 @@ import (
 	runtime2 "github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
-//go:embed all:frontend/dist
+//go:embed frontend/dist/assets
 var assets embed.FS
 
 func main() {
@@ -72,10 +72,10 @@ func main() {
 			OnResume:         func() {},
 		},
 		Mac: &mac.Options{
-			TitleBar: mac.TitleBarHiddenInset(),
-			// Appearance:           mac.NSAppearanceNameVibrantLight,
-			WebviewIsTransparent: false,
-			WindowIsTranslucent:  false,
+			TitleBar:             mac.TitleBarHiddenInset(),
+			Appearance:           mac.NSAppearanceNameVibrantLight,
+			WebviewIsTransparent: true,
+			WindowIsTranslucent:  true,
 			Preferences: &mac.Preferences{
 				TabFocusesLinks:        u.False,
 				TextInteractionEnabled: u.True,
