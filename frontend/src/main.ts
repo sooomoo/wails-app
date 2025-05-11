@@ -9,7 +9,7 @@ preventDocumentDefaultEvents();
 import { createApp } from "vue";
 import App from "./App.vue";
 import "./assets/styles/main.scss";
-import { router } from "./routes/Router";
+import { router } from "./pages/Router";
 import { EventsOn } from "../wailsjs/runtime/runtime";
 
 const app = createApp(App);
