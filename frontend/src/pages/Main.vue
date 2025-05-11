@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onBeforeUnmount, ref } from "vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { OnFileDrop, ResolveFilePaths } from "../../wailsjs/runtime/runtime";
+import { OnFileDrop } from "../../wailsjs/runtime/runtime";
 
 const router = useRouter();
 
@@ -41,7 +41,7 @@ OnFileDrop((x, y, files) => {
   </div>
   <div>
     <div>drop files:</div>
-    <div v-for="f in dropFiles">{{ f }}</div>
+    <div v-for="f in dropFiles" :key="f">{{ f }}</div>
   </div>
 </template>
 

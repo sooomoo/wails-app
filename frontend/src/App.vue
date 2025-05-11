@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import TitleBar from "./components/TitleBar.vue";
-console.log(",,");
 </script>
 
 <template>

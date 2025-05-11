@@ -20,7 +20,7 @@ const isMaximized = ref(false);
 EventsOn("window_changed", (info) => {
   const { maximised } = info;
   isMaximized.value = maximised;
-  console.log("isMaximized", maximised, (window as any).wails);
+  // console.log("isMaximized", maximised, window.wails);
 });
 
 onMounted(async () => {

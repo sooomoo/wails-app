@@ -5,6 +5,7 @@ import pluginVue from "eslint-plugin-vue";
 import css from "@eslint/css";
 import { defineConfig } from "eslint/config";
 import prettierConfig from "eslint-config-prettier"; // 新增：Prettier 兼容配置
+import prettierPlugin from "eslint-plugin-prettier";
 
 export default defineConfig([
   {
@@ -44,14 +45,15 @@ export default defineConfig([
       "@typescript-eslint/no-var-requires": "warn", // 允许使用 require()
       "@typescript-eslint/no-explicit-any": "error", // 允许使用 any 类型
       "@typescript-eslint/no-this-alias": "warn", // 允许 this 别名
+      "@typescript-eslint/no-empty-object-type": "error",
       "no-debugger": "warn", // 允许 debugger 语句
 
       // ----- Vue 专用规则 -----
       "vue/multi-word-component-names": [
         // 组件名必须多单词
-        "error",
+        "off",
         {
-          ignores: ["Index", "Header", "App"], // 允许例外的组件名
+          ignores: ["Index", "Header", "App", "pages/**"], // 允许例外的组件名
         },
       ],
       "vue/no-unused-vars": "error", // 关闭 Vue 未使用变量检查
@@ -59,6 +61,16 @@ export default defineConfig([
       "vue/require-v-for-key": "error", // 关闭 v-for 必须带 key 的检查
       "vue/no-textarea-mustache": "warn", // 允许 textarea 使用 mustache
       "vue/no-v-html": "warn", // 允许使用 v-html（注意 XSS 风险）
+    },
+  },
+  {
+    files: ["**/*.{js,mjs,cjs}"],
+    plugins: { js, prettier: prettierPlugin }, //使用 eslint-plugin-prettier插件
+    extends: ["js/recommended"],
+    rules: {
+      semi: "error", // 强制分号，违反时报错
+      "prefer-const": "error", // 强制用 const 声明未修改的变量
+      "prettier/prettier": "error", //规范prettier规则报error
     },
   },
   prettierConfig,
