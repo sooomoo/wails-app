@@ -32,7 +32,7 @@ func main() {
 		MinHeight:                400,
 		Frameless:                !isMacOS,
 		EnableDefaultContextMenu: false,
-		StartHidden:              true,
+		StartHidden:              false,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
@@ -96,7 +96,7 @@ func main() {
 			app,
 		},
 		Debug: options.Debug{
-			OpenInspectorOnStartup: true,
+			OpenInspectorOnStartup: isMacOS,
 		},
 	})
 
