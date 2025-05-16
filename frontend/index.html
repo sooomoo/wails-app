@@ -1,33 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>wails-app</title>
     <style type="text/css">
-        .fade-in-keyframes {
-            animation: fadeIn .5s;
+      .fade-in-keyframes {
+        animation: fadeIn 0.5s;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
         }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
+        100% {
+          opacity: 1;
         }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
-    <div id="app-splash">
-        Loading...
-    </div>
-    <script src="./src/main.ts" type="module"></script>
-</body>
-
+    <div id="app-splash">Loading...</div>
+    <script src="./main.ts" type="module"></script>
+  </body>
 </html>

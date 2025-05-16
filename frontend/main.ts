@@ -10,7 +10,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "./assets/styles/main.scss";
 import { router } from "./pages/Router";
-import { EventsOn } from "../wailsjs/runtime/runtime";
+import { EventsOn } from "./wailsjs/runtime/runtime";
 
 const app = createApp(App);
 app.use(router).mount("#app");

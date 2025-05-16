@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { OnFileDrop } from "../../wailsjs/runtime/runtime";
+import { OnFileDrop } from "../wailsjs/runtime/runtime";
 
 const router = useRouter();
 

@@ -6,7 +6,7 @@ import {
   WindowIsMaximised,
   WindowMinimise,
   WindowToggleMaximise,
-} from "../../wailsjs/runtime/runtime.js";
+} from "../wailsjs/runtime/runtime.js";
 
 defineProps({
   title: {

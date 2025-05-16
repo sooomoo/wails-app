@@ -13,13 +13,8 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
   },
-  "include": [
-    "./src/**/*.ts",
-    "./src/**/*.d.ts",
-    "./src/**/*.tsx",
-    "./src/**/*.vue"
-  ],
-  "exclude": ["node_modules", "dist"],
+  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx", "./**/*.vue"],
+  "exclude": ["node_modules", "dist", "wailsjs", "vite.config.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
