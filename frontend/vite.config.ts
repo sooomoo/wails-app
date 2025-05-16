@@ -4,10 +4,15 @@ import { resolve } from "path";
 import AutoImport from "unplugin-auto-import/vite";
 import VueRouter from "unplugin-vue-router/vite";
 import { VueRouterAutoImports } from "unplugin-vue-router";
+import Layouts from "vite-plugin-vue-layouts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    Layouts({
+      layoutsDirs: "layouts", // 指定布局文件的目录路径
+      defaultLayout: "default", // 指定默认布局文件的名称
+    }),
     VueRouter({
       routesFolder: [
         {
@@ -48,7 +53,7 @@ export default defineConfig({
       // },
 
       // modify routes individually
-      // async extendRoute(route) {
+      // extendRoute(route) {
       // },
 
       // modify routes before writing
