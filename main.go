@@ -60,8 +60,8 @@ func main() {
 			WindowClassName:                   "wailsdemo",
 			// CustomTheme: 最低 Windows 版本：Windows 10/11 2009/21H2 Build 22000
 			CustomTheme: &windows.ThemeSettings{
-				DarkModeBorder:          windows.RGB(50, 50, 50),
-				DarkModeBorderInactive:  windows.RGB(50, 50, 50),
+				DarkModeBorder:          windows.RGB(40, 40, 40),
+				DarkModeBorderInactive:  windows.RGB(40, 40, 40),
 				LightModeBorder:         windows.RGB(220, 220, 220),
 				LightModeBorderInactive: windows.RGB(220, 220, 220),
 			},

@@ -50,7 +50,7 @@ OnFileDrop((x, y, files) => {
   width: 100px;
   padding: 6px 24px;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-card-background);
   cursor: pointer;
 }
 
@@ -62,7 +62,7 @@ OnFileDrop((x, y, files) => {
 .main__drop-area {
   width: 200px;
   min-height: 160px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-card-background);
   display: flex;
   align-items: center;
   justify-content: center;
