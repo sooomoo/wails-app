@@ -3,8 +3,7 @@ import TitleBar from "@/components/TitleBar.vue";
 </script>
 
 <template>
-  <TitleBar title="演示案例"></TitleBar>
-  <h1>In Default Layout</h1>
+  <TitleBar title="演示案例 - Default Layout"></TitleBar>
   <RouterView />
 </template>
 

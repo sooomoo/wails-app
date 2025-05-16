@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { reactive } from "vue";
 import { useRouter } from "vue-router";
 import { OnFileDrop } from "../wailsjs/runtime/runtime";
 
@@ -12,11 +12,11 @@ const onDragOver = (evt: DragEvent) => {
   evt.dataTransfer.dropEffect = "copy";
 };
 
-const dropFiles = ref(new Array<string>());
+const dropFiles = reactive(new Array<string>());
 
 OnFileDrop((x, y, files) => {
-  console.log("OnFileDrop", files);
-  dropFiles.value.push(...files);
+  console.log("OnFileDrop 123", files);
+  dropFiles.push(...files);
 }, true);
 </script>
 
@@ -29,12 +29,8 @@ OnFileDrop((x, y, files) => {
     KAITIAN 启动速度优化过程。
   </div>
   <button class="main__btn" @click="gotoAbout">about</button>
-  <div class="main__hor"></div>
-
-  <div class="main__hor"></div>
-
   <div
-    class="main__drop-area wails-drop-target-active"
+    class="main__drop-area wails-drop-target-active drop-target"
     @dragover.prevent.stop="onDragOver"
   >
     drop in
@@ -54,19 +50,8 @@ OnFileDrop((x, y, files) => {
   width: 100px;
   padding: 6px 24px;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
-}
-
-.main__input {
-  appearance: none;
-  outline: none;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  width: 200px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 
 .main__hor {
@@ -77,11 +62,10 @@ OnFileDrop((x, y, files) => {
 .main__drop-area {
   width: 200px;
   min-height: 160px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
-  --wails-drop-target: drop;
+  border-radius: 8px;
 }
 </style>

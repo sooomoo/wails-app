@@ -39,6 +39,9 @@ body {
 .spacer {
   flex: 1;
 }
+.drop-target {
+  --wails-drop-target: drop;
+}
 
 ::-webkit-scrollbar {
   width: var(--scrollbar-size);

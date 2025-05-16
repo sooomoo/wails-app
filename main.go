@@ -96,7 +96,7 @@ func main() {
 			app,
 		},
 		Debug: options.Debug{
-			OpenInspectorOnStartup: isMacOS,
+			OpenInspectorOnStartup: true,
 		},
 	})
 
