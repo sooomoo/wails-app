@@ -1,12 +1,8 @@
-import { getOSType } from "./utils/os";
-import { preventDocumentDefaultEvents } from "./utils/prevent_defauts";
-
 document.documentElement.setAttribute("data-os", getOSType());
 document.documentElement.setAttribute("data-theme", "dark");
 
 preventDocumentDefaultEvents();
 
-import { createApp } from "vue";
 import App from "./App.vue";
 import "./assets/styles/main.scss";
 import { router } from "./pages/Router";
