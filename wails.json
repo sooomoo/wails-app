@@ -10,7 +10,7 @@
   "frontend:dev:install": "pnpm install",
   "frontend:dev:build": "pnpm run build",
   "frontend:dir": "E:\\old_code\\vue-project-template",
-  "wailsjsdir": "E:\\old_code\\vue-project-template\\src\\desktop",
+  "wailsjsdir": "E:\\old_code\\vue-project-template\\src\\platforms\\desktop",
   "obfuscated": true, 
   "author": {
     "name": "xxx",
