@@ -2,6 +2,7 @@ document.documentElement.setAttribute("data-os", getOSType());
 document.documentElement.setAttribute("data-theme", "dark");
 
 preventDocumentDefaultEvents();
+console.log('window', window) 
 
 import "@/assets/styles/main.scss";
 import { EventsOn } from "./wailsjs/runtime/runtime";
