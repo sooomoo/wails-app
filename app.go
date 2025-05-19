@@ -55,3 +55,24 @@ func (a *App) Greet(name string) string {
 func (a *App) Platform() string {
 	return runtime.GOOS
 }
+
+type ThemeMode string
+const (
+	ThemeModeSystem ThemeMode = "auto"
+	ThemeModeDark  ThemeMode = "dark"
+	ThemeModeLight ThemeMode = "light"
+)
+
+func (a *App) SetTheme(theme ThemeMode)  {
+	// TODO: save theme into config file
+	if runtime.GOOS == "windows" {
+		switch theme {
+		case ThemeModeDark:
+			runtime2.WindowSetDarkTheme(a.ctx)
+		case ThemeModeLight:
+			runtime2.WindowSetLightTheme(a.ctx)
+		case ThemeModeSystem:
+			runtime2.WindowSetSystemDefaultTheme(a.ctx )
+		} 
+	}
+}

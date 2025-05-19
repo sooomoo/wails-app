@@ -49,21 +49,24 @@ func main() {
 			CSSDropProperty:    "--wails-drop-target",
 			CSSDropValue:       "drop",
 		},
+		// WindowIsTranslucent:true +
+		// BackdropType: None/Auto + 
+		// BorderColor可以实现没有Win11细边框的效果
 		Windows: &windows.Options{
 			WebviewIsTransparent:              true,
 			WindowIsTranslucent:               true,
 			DisableFramelessWindowDecorations: false,
 			WebviewGpuIsDisabled:              false,
 			EnableSwipeGestures:               false,
-			BackdropType:                      windows.Mica,
+			BackdropType:                      windows.None,
 			Theme:                             windows.SystemDefault,
 			WindowClassName:                   "wailsdemo",
 			// CustomTheme: 最低 Windows 版本：Windows 10/11 2009/21H2 Build 22000
 			CustomTheme: &windows.ThemeSettings{
 				DarkModeBorder:          windows.RGB(40, 40, 40),
 				DarkModeBorderInactive:  windows.RGB(40, 40, 40),
-				LightModeBorder:         windows.RGB(220, 220, 220),
-				LightModeBorderInactive: windows.RGB(220, 220, 220),
+				LightModeBorder:         windows.RGB(240, 240, 240),
+				LightModeBorderInactive: windows.RGB(240, 240, 240),
 			},
 			ResizeDebounceMS: 0,
 			ZoomFactor:       1,
