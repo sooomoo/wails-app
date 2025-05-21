@@ -65,8 +65,8 @@ func main() {
 			CustomTheme: &windows.ThemeSettings{
 				DarkModeBorder:          windows.RGB(40, 40, 40),
 				DarkModeBorderInactive:  windows.RGB(40, 40, 40),
-				LightModeBorder:         windows.RGB(240, 240, 240),
-				LightModeBorderInactive: windows.RGB(240, 240, 240),
+				LightModeBorder:         windows.RGB(244, 244, 244),
+				LightModeBorderInactive: windows.RGB(244, 244, 244),
 			},
 			ResizeDebounceMS: 0,
 			ZoomFactor:       1,
