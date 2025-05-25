@@ -11,7 +11,7 @@
   "frontend:dev:build": "pnpm run build",
   "frontend:dir": "E:\\old_code\\vue-project-template",
   "wailsjsdir": "E:\\old_code\\vue-project-template\\src\\desktop",
-  "obfuscated": true, 
+  "obfuscated": true,
   "author": {
     "name": "xxx",
     "email": "xxx@qq.com"

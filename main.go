@@ -7,6 +7,7 @@ import (
 
 	"github.com/leaanthony/u"
 	"github.com/wailsapp/wails/v2"
+	"github.com/wailsapp/wails/v2/pkg/logger"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
 	"github.com/wailsapp/wails/v2/pkg/options/mac"
@@ -32,7 +33,7 @@ func main() {
 		MinHeight:                400,
 		Frameless:                !isMacOS,
 		EnableDefaultContextMenu: false,
-		StartHidden:              false,
+		StartHidden:              false, 
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
@@ -58,7 +59,7 @@ func main() {
 			DisableFramelessWindowDecorations: false,
 			WebviewGpuIsDisabled:              false,
 			EnableSwipeGestures:               false,
-			BackdropType:                      windows.None,
+			BackdropType:                      windows.Mica,
 			Theme:                             windows.SystemDefault,
 			WindowClassName:                   "wailsdemo",
 			// CustomTheme: 最低 Windows 版本：Windows 10/11 2009/21H2 Build 22000
@@ -101,6 +102,8 @@ func main() {
 		Debug: options.Debug{
 			OpenInspectorOnStartup: true,
 		},
+		Logger: logger.NewFileLogger("./wails.log"),
+		LogLevelProduction: logger.DEBUG,
 	})
 
 	if err != nil {
